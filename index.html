@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Bookshelf Apps</title>
+  </head>
+  <body>
+    <header>
+      <h1>Bookshelf App by noanlearn</h1>
+    </header>
+    <main>
+      <div class="wrapper">
+        <div class="container card-add">
+          <h3 class="container-header">Tambah Buku Baru</h3>
+          <form action="#" id="add-book">
+            <div class="form-group">
+              <label for="title">Judul buku</label>
+              <input type="text" name="title" id="title" />
+            </div>
+            <div class="form-group">
+              <label for="author">Nama penulis</label>
+              <input type="text" name="author" id="author" />
+            </div>
+            <div class="form-group">
+              <label for="year">Tahun terbit</label>
+              <input type="number" name="year" id="year" />
+            </div>
+            <input type="checkbox" name="completed" id="completed" /> Selesai
+            dibaca
+            <button type="submit" class="btn-add">+</button>
+          </form>
+        </div>
+
+        <div class="show">
+          <div class="search-input">
+            <form action="#" id="search-book">
+              <div class="icon">&#128270;</div>
+              <input
+                type="text"
+                id="search-title"
+                name="search-title"
+                placeholder=" Cari judul buku disini..."
+              />
+            </form>
+            <!-- &#x1F50E; -->
+          </div>
+          <div class="card">
+            <div class="container card-uncompleted">
+              <h3 class="container-header">Belum atau sedang dibaca</h3>
+              <div class="list-item" id="books">
+                <!-- Nanti lewat JS -->
+                <!-- <div class="item uncompleted">
+                  <div class="inner">
+                    <h4>Dasar-dasar Analitik Data: Data, Data di Mana-mana</h4>
+                    <p>Penulis: J.K Rowling</p>
+                    <p>Tahun: 2008</p>
+                  </div>
+                  <div class="btn-action">
+                    <button class="check-button">&#10004;</button>
+                    <button class="trash-button">&#128465;</button>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+
+            <div class="container card-completed">
+              <h3 class="container-header">Selesai dibaca</h3>
+              <div class="list-item" id="completed-books">
+                <!-- Nanti lewat JS -->
+                <!-- <div class="item completed">
+                  <div class="inner">
+                    <h4>
+                      Dasar-dasar Analitik Data: Data, Data di Mana-mana
+                      Dasar-dasar Analitik Data: Data, Data di Mana-mana
+                    </h4>
+                    <p>Penulis: J.K Rowling</p>
+                    <p>Tahun: 2008</p>
+                  </div>
+                  <div class="btn-action">
+                    <button class="undo-button">&#9100;</button>
+                    <button class="trash-button">&#128465;</button>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

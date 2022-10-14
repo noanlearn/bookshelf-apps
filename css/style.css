@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&family=Silkscreen&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Rubik', sans-serif; */
+}
+
+body {
+  /* background-image: url(../assets/bg-bookshelf.webp); */
+  overflow: auto;
+}
+
+header h1 {
+  display: flex;
+  justify-content: flex-start;
+  background-color: white;
+  color: rgb(88, 147, 235);
+  padding: 10px;
+  font-family: "Silkscreen", cursive;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.wrapper .container {
+  margin: 10px;
+  background-color: white;
+  height: fit-content;
+  padding: 16px;
+  flex-basis: 25%;
+  border-radius: 5px;
+  border: 1px solid;
+}
+
+.container-header {
+  font-family: "Rubik", sans-serif;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+#add-book {
+  font-family: "Rubik", sans-serif;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  margin-bottom: 4px;
+  font-size: medium;
+  font-weight: lighter;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  font-size: medium;
+  border-radius: 5px;
+  border: 1px solid rgb(161, 161, 161);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus {
+  background-color: rgba(88, 147, 235, 0.1);
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.btn-add {
+  padding: 8px;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: rgba(88, 147, 235, 0.7);
+  border: 1px solid black;
+  border-radius: 100%;
+  box-shadow: 0 5px #999;
+  font-size: x-large;
+  font-weight: bolder;
+  float: right;
+}
+
+.btn-add:hover {
+  background-color: rgba(88, 147, 235, 0.9);
+}
+
+.btn-add:active {
+  background-color: #5893eb;
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
+}
+
+.wrapper .show {
+  flex-basis: 75%;
+  margin-top: 10px;
+  font-family: "Rubik", sans-serif;
+}
+
+#search-book {
+  display: flex;
+  margin: 0 10px;
+  align-items: center;
+}
+
+#search-book .icon {
+  vertical-align: middle;
+  font-size: x-large;
+  margin-right: 5px;
+}
+
+#search-book input[type="text"] {
+  padding: 10px;
+  flex-basis: 80%;
+  font-size: large;
+  border-radius: 5px;
+  border: 1px solid rgb(161, 161, 161);
+}
+
+.btn-search {
+  flex-basis: 10%;
+  background-color: white;
+  color: #008cba;
+  padding: 10px;
+  font-size: medium;
+  border-radius: 5px;
+  border: 2px solid #008cba;
+  margin-left: 1%;
+}
+
+.btn-search:hover {
+  background-color: #008cba;
+  color: white;
+  font-weight: bolder;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+}
+
+.card .container {
+  flex-grow: 1;
+}
+
+.card-add {
+  box-shadow: 5px 5px #9adcff;
+}
+
+.card-uncompleted {
+  box-shadow: 5px 5px yellow;
+  flex-basis: 50%;
+}
+
+.card-completed {
+  box-shadow: 5px 5px #92ba92;
+  flex-basis: 50%;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  height: fit-content;
+  padding: 16px;
+  flex-grow: 1;
+  border-radius: 5px;
+  border: 1px solid;
+  margin-bottom: 15px;
+}
+
+.uncompleted {
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
+.completed {
+  background-color: rgba(0, 128, 0, 0.2);
+}
+
+.item .inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.inner p {
+  margin-top: 5px;
+  overflow-wrap: break-word;
+}
+
+.h4 {
+  overflow-wrap: break-word;
+}
+
+.btn-action {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.check-button {
+  margin: 9px 2px;
+  padding: 0 10px;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  cursor: pointer;
+  color: #000;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 100%;
+  box-shadow: 0 5px #999;
+  font-size: large;
+  font-weight: bolder;
+}
+
+.check-button:hover {
+  background-color: rgba(0, 128, 0, 0.8);
+  color: #fff;
+}
+
+.check-button:active {
+  background-color: green;
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
+}
+
+.undo-button {
+  margin: 9px 2px;
+  padding: 0 10px;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #000;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 100%;
+  box-shadow: 0 5px #999;
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+.undo-button:hover {
+  background-color: rgba(255, 255, 0, 0.7);
+}
+
+.undo-button:active {
+  background-color: yellow;
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
+}
+
+.trash-button {
+  margin: 9px 2px;
+  padding: 0 8px;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 100%;
+  box-shadow: 0 5px #999;
+  font-size: large;
+  font-weight: bolder;
+}
+
+.trash-button:hover {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+.trash-button:active {
+  background-color: red;
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper,
+  .card {
+    flex-direction: column;
+  }
+
+  #search-book {
+    justify-content: center;
+  }
+}
